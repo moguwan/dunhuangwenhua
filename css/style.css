@@ -20,14 +20,16 @@ html, body {
 body {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+    padding-top: env(safe-area-inset-top, 0);
 }
 
 .app-container {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     max-width: 640px;
+    max-height: 100vh;
     position: relative;
     overflow: hidden;
     background: linear-gradient(180deg, #2d1f14 0%, #1a0f0a 50%, #0d0705 100%);
@@ -577,9 +579,14 @@ body {
 /* 响应式适配 */
 @media (max-width: 640px) {
     .app-container {
-        width: 100vw;
-        height: 100vh;
-        max-width: 100vw;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+    }
+    
+    body {
+        align-items: flex-start;
+        padding-top: 0;
     }
     
     .cover-title {
