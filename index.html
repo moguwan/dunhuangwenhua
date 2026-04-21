@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>敦煌文化知识测试</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 背景音乐控制 -->
+        <div class="music-control" id="musicControl">
+            <div class="music-icon">🎵</div>
+        </div>
+
+        <!-- 封面页 -->
+        <section class="page cover-page active" id="coverPage">
+            <div class="cover-content">
+                <div class="cover-decoration top"></div>
+                <h1 class="cover-title">敦煌文化</h1>
+                <h2 class="cover-subtitle">知识测试</h2>
+                <p class="cover-desc">穿越千年丝路，探寻莫高秘境</p>
+                <div class="cover-image"></div>
+                <button class="btn-start" id="btnStart">开始测试</button>
+                <div class="cover-decoration bottom"></div>
+            </div>
+        </section>
+
+        <!-- 答题页 -->
+        <section class="page quiz-page" id="quizPage">
+            <div class="quiz-header">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="question-counter">
+                    <span id="currentNum">1</span> / <span id="totalNum">5</span>
+                </div>
+            </div>
+            <div class="quiz-content">
+                <div class="question-box">
+                    <h3 class="question-text" id="questionText"></h3>
+                </div>
+                <div class="options-list" id="optionsList"></div>
+            </div>
+            <div class="feedback-popup" id="feedbackPopup">
+                <div class="feedback-icon" id="feedbackIcon"></div>
+                <div class="feedback-text" id="feedbackText"></div>
+            </div>
+        </section>
+
+        <!-- 结果页 -->
+        <section class="page result-page" id="resultPage">
+            <div class="result-content">
+                <div class="result-decoration"></div>
+                <h2 class="result-title">测试完成</h2>
+                <div class="score-circle">
+                    <span class="score-num" id="scoreNum">0</span>
+                    <span class="score-total">/100</span>
+                </div>
+                <div class="result-level" id="resultLevel"></div>
+                <div class="result-desc" id="resultDesc"></div>
+                <div class="result-image" id="resultImage"></div>
+                <button class="btn-restart" id="btnRestart">重新测试</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- 音频元素 -->
+    <audio id="bgMusic" loop>
+        <source src="实验2素材：测试型(2)/瀹為獙2绱犳潗锛氭祴璇曞瀷/6.鑳屾櫙闊充箰/et11lx-chinese-ancient-style-music-love-et11lx-155926.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="correctSound">
+        <source src="实验2素材：测试型(2)/瀹為獙2绱犳潗锛氭祴璇曞瀷/5.鎻愮ず闊虫晥/姝ｇ‘鎻愮ず1.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="wrongSound">
+        <source src="实验2素材：测试型(2)/瀹為獙2绱犳潗锛氭祴璇曞瀷/5.鎻愮ず闊虫晥/閿欒鎻愮ず1.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="clickSound">
+        <source src="实验2素材：测试型(2)/瀹為獙2绱犳潗锛氭祴璇曞瀷/5.鎻愮ず闊虫晥/寮瑰嚭鎻愮ず.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="completeSound">
+        <source src="实验2素材：测试型(2)/瀹為獙2绱犳潗锛氭祴璇曞瀷/5.鎻愮ず闊虫晥/瀹屾垚鎻愮ず.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
